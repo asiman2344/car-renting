@@ -1,0 +1,109 @@
+.banner{
+    background-color: #f1f5f9;
+    padding: 139px 0;
+}
+
+.banner .banner-container .banner-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner .banner-container .banner-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+.banner .banner-container .banner-content .renting-date-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-container .renting-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px 30px ;
+    border-radius: 3.40282e38px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.banner .banner-container .renting-date .renting-date-container div{
+    margin-right: 40px;
+}
+
+.banner .banner-container .renting-date .renting-date-first select{
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.banner .banner-container .renting-date .renting-date-first p{
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: oklch(55.1% .027 264.364);
+}
+
+.banner .banner-container .renting-date .pickup-date p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.banner .banner-container .renting-date .pickup-date input{
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: oklch(55.1% .027 264.364);
+}
+
+.banner .banner-container .renting-date .return-date p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.banner .banner-container .renting-date .return-date input{
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: oklch(55.1% .027 264.364);
+}
+
+.banner .banner-container .renting-date .search-button{
+    display: flex;
+    align-items: center;
+    border-radius: 3.40282e38px;
+    padding: 12px 36px;
+    background-color: #2563eb;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.banner .banner-container .renting-date .search-button:hover{
+    scale: 1.05;
+}
+
+.banner .banner-container .renting-date .search-button button{
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.banner .banner-container .renting-date .search-button svg path{
+    color: white;
+}
+
+.banner .banner-container img{
+    width: 850px;
+    display: block;
+    margin: 0 auto;
+}

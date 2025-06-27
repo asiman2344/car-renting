@@ -1,0 +1,55 @@
+
+.header{
+    background-color: #f1f5f9;
+    padding: 16px 128px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid #cacaca;
+}
+
+.header .header-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header-container .right-side{
+    display: flex;
+    align-items: center;
+}
+
+.header .right-side .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c4c7d2;
+    padding: 0px 12px;
+    border-radius: 3.40282e38px;
+    margin-right: 20px;
+}
+
+
+.header .right-side .search-bar input {
+    outline: none;
+    border: none;
+    padding: 6px 0;
+}
+
+.header .right-side .search-bar svg path {
+    color: oklch(44.6% .03 256.802);
+}
+
+.header .right-side .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.header .right-side .login-button {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 8px 32px;
+    border-radius: .5rem;
+}
