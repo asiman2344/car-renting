@@ -147,3 +147,25 @@
 .card .card-content .card-info2 .card-info2-item div p{
     margin-left: 10px;
 }
+
+.card-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.card-button-container .card-button{
+    padding: 8px 24px;
+    border-radius: 5px;
+    border: 1px solid #c4c7d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button-container .card-button svg{
+    margin-left: 10px;
+}
