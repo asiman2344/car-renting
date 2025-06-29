@@ -31,6 +31,11 @@ function card() {
                     </div>
                 </div>
             </div>
+            <div className='card-price'>
+                <p>$1000 <span>/ month</span></p>
+            </div>
+
+            <p className='available'>Available Now</p>
         </div>
     )
 }
