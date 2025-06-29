@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '../components/header'
 import Banner from '../components/banner'
 import CardContainer from '../components/cardContainer.jsx'
+import Banner1 from '../components/banner1.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './App.css'
@@ -22,6 +23,7 @@ function App() {
         <Header />
         <Banner />
         <CardContainer />
+        <Banner1 />
       </div>
     </Router>
   )
