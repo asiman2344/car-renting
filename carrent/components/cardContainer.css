@@ -1,0 +1,104 @@
+.cardContainer {
+    padding: 96px 128px;
+}
+.container{
+    padding: 0 200px;
+}
+
+.cardContainer .card-title-container{
+    margin-bottom: 60px;
+}
+
+.cardContainer .card-title-container .card-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.cardContainer .card-title-container .card-description {
+    text-align: center;
+    color: #666;
+}
+
+.card {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(77, 77, 77);
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card .card-content{
+    padding: 0 20px;
+}
+
+.card .card-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card .card-image img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.card .card-title{
+    margin-bottom: 10px;
+}
+
+.card .card-content .card-title p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .card-content .card-title p:nth-child(2) {
+    font-weight: 500;
+    color: #666;
+}
+
+.card .card-content .card-info1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card .card-content .card-info1 .card-info1-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .card-content .card-info1 .card-info1-item div p{
+    margin-left: 10px;
+}
+
+.card .card-content .card-info2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.card .card-content .card-info2 .card-info2-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .card-content .card-info2 .card-info2-item div p{
+    margin-left: 10px;
+}
