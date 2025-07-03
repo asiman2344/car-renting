@@ -6,6 +6,7 @@ import CardContainer from '../components/cardContainer.jsx'
 import Banner1 from '../components/banner1.jsx'
 import Customer from '../components/customer.jsx'
 import Deals from '../components/deals.jsx'
+import Footer from '../components/footer.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './App.css'
@@ -27,7 +28,8 @@ function App() {
         <CardContainer />
         <Banner1 />
         <Customer />
-        <Deals />
+        <Deals /> 
+        <Footer />
       </div>
     </Router>
   )
