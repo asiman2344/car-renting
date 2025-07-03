@@ -1,0 +1,79 @@
+.customer {
+    padding: 112px 176px;
+}
+
+.customer-container .customer-title {
+    text-align: center;
+}
+
+.customer-container .customer-title h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.customer-container .customer-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.customer .customer-container .customer-title p:first-of-type {
+    margin-top: 12px;
+}
+
+.customer-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.customer-card-item {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.customer-card-item .customer-card-item-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.customer-card-item .customer-card-item-content .customer-card-item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.customer-card-item .customer-card-item-content .customer-card-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customer-card-item .customer-card-item-content .customer-card-item-name h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.customer-card-item .customer-card-item-content .customer-card-item-name p {
+    font-size: 16px;
+    color: #666;
+}
+
+.customer-card-item .customer-card-item-text .text-icon {
+    margin-top: 16px;
+}
+
+.customer-card-item .customer-card-item-text .text-icon .fa-star {
+    color: #0558fe;
+}
+
+.customer-card-item .customer-card-item-text p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 16px;
+}

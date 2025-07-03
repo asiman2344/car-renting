@@ -1,0 +1,48 @@
+.deals {
+    padding: 112px 176px;
+}
+
+.deals-container .deals-title {
+    text-align: center;
+}
+
+.deals-container .deals-title h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.deals-container .deals-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.deals-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.deals-form-input {
+    width: 600px;
+}
+
+.deals-form-input input {
+    width: 100%;
+    padding: 12px 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+}
+
+.deals-form-button button {
+    width: 150px;
+    padding: 12px 24px;
+    background-color: #1f58d8;
+    color: #fff;
+    border: 1px solid #1f58d8;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}

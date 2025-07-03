@@ -4,6 +4,8 @@ import Header from '../components/header'
 import Banner from '../components/banner'
 import CardContainer from '../components/cardContainer.jsx'
 import Banner1 from '../components/banner1.jsx'
+import Customer from '../components/customer.jsx'
+import Deals from '../components/deals.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './App.css'
@@ -24,6 +26,8 @@ function App() {
         <Banner />
         <CardContainer />
         <Banner1 />
+        <Customer />
+        <Deals />
       </div>
     </Router>
   )
