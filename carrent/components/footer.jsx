@@ -25,7 +25,7 @@ function footer() {
                 </div>
 
                 <div className='footer-container-right'>
-                    <div className='footer-right-firs'>
+                    <div className='footer-right-first'>
                         <h3>Quick Links</h3>
                         <Link to='/'>Home</Link>
                         <Link to='/browse'>Browse Cars</Link>

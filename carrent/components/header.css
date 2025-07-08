@@ -1,9 +1,10 @@
-
-.header{
+.header {
     background-color: #f1f5f9;
     padding: 16px 128px;
+    /* 16px 70px for mobile */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-bottom: 1px solid #cacaca;
+    position: relative;
 }
 
 .header .header-container {
@@ -13,7 +14,7 @@
     align-items: center;
 }
 
-.header .header-container .right-side{
+.header .header-container .right-side {
     display: flex;
     align-items: center;
 }
@@ -52,4 +53,68 @@
     color: #fff;
     padding: 8px 32px;
     border-radius: .5rem;
+}
+
+/* mobile menu */
+
+@media (max-width: 915px) {
+    .header {
+        padding: 16px 30px;
+    }
+
+    .header .header-mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header .header-mobile-menu svg {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .header .header-mobile-menu-content {
+        position: fixed;
+        right: 0;
+        top: 62px;
+        height: 93.4vh;
+        width: 100%;
+        background-color: #f1f5f9;
+        padding: 16px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .header .header-mobile-menu-content.active {
+        transform: translateX(0);
+    }
+
+    .header .header-mobile-menu-content .nav-link {
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #575757
+    }
+
+    .header .header-mobile-menu-content .login-button {
+        background-color: #2563eb;
+        color: #fff;
+        padding: 8px 32px;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    .header .header-container .right-side {
+        display: none;
+    }
+}
+
+@media (min-width: 916px) and (max-width: 1300px) {
+    .header{
+        padding: 16px 40px;
+    }
 }

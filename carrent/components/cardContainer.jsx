@@ -2,7 +2,7 @@ import React from 'react'
 import './cardContainer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import Car from '../assets/carImage.webp'
+// import Car from '../assets/carImage.webp'
 import Card from './card'
 
 function cardContainer() {

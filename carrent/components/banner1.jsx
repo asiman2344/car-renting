@@ -10,9 +10,11 @@ function banner1() {
                     <h2>Do You Own a Luxury Car?</h2>
                     <p>Monetize your vehicle effortlessly by listing it on CarRental.</p>
                     <p>We take care of insurance, driver verification and secure payments — so you can earn passive income, stress-free.</p>
-                    <button>List Your Car</button>
+                    <div className='banner1-content-button'>
+                        <button>List Your Car</button>
+                    </div>
                 </div>
-                <div className='banner1-image' data-aos="fade-left">
+                <div className='banner1-image' >
                     <img src={Img} alt='banner1' />
                 </div>
             </div>

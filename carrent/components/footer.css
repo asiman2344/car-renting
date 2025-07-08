@@ -50,4 +50,38 @@
     margin-bottom: 10px;
 }
 
+@media (max-width: 1250px) {
+    .footer{
+        padding: 0 16px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .footer-container-left{
+        width: 80%;
+    }
+    
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 25px;
+    }
+
+    .footer-container-right{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 48px;
+    }
+
+    .footer-container-right div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* padding: 0 16px; */
+        margin-bottom: 24px;
+    }
+}
+
 
