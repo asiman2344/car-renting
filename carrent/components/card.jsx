@@ -2,10 +2,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faGasPump, faCarSide, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Car from '../assets/carImage.webp'
+import { useNavigate } from 'react-router-dom'
 
 function card() {
+    const navigate = useNavigate()
     return (
-        <div className="card">
+        <div onClick={() => navigate('/car-details')} className="card">
             <div className="card-image">
                 <img src={Car} alt="car" />
             </div>

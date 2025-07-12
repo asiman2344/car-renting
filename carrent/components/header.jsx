@@ -20,8 +20,8 @@ function header() {
           <img src={Logo} alt="logo" />
         </div>
         <div className='right-side'>
-          <Link className='nav-link'>Home</Link>
-          <Link className='nav-link'>Cars</Link>
+          <Link to="/" className='nav-link'>Home</Link>
+          <Link to="/cars" className='nav-link'>Cars</Link>
           <Link className='nav-link'>My Bookings</Link>
           <div className='search-bar'><input type="text" placeholder='Search' /><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
           <Link className='nav-link'>List Cars</Link>
