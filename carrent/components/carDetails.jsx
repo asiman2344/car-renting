@@ -48,7 +48,7 @@ function carDetails() {
                                     <ul>
                                         <li><FontAwesomeIcon icon={faCheck} />360 camera</li>
                                         <li><FontAwesomeIcon icon={faCheck} />360 camera</li>
-                                        <li><FontAwesomeIcon icon={faCheck} />360 camera</li>   
+                                        <li><FontAwesomeIcon icon={faCheck} />360 camera</li>
                                         <li><FontAwesomeIcon icon={faCheck} />360 camera</li>
                                         <li><FontAwesomeIcon icon={faCheck} />360 camera</li>
                                     </ul>
