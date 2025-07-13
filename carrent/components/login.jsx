@@ -2,15 +2,15 @@ import React, { useEffect } from 'react'
 import './login.css'
 
 function login() {
-//   useEffect(() => {
-//     // Disable scrolling when component mounts
-//     document.body.style.overflow = 'hidden';
+  useEffect(() => {
+    // Disable scrolling when component mounts
+    document.body.style.overflow = 'hidden';
     
-//     // Re-enable scrolling when component unmounts
-//     return () => {
-//       document.body.style.overflow = 'unset';
-//     };
-//   }, []);
+    // Re-enable scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return (
     <div className='login-container'>
