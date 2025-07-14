@@ -21,7 +21,7 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
-      {/* <Login /> */}
+      <Login />
     </div>
   )
 }

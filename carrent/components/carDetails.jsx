@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faPerson, faGasPump, faCarSide, faLocationDot, faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +6,10 @@ import Car from '../assets/carImage.webp'
 import './carDetails.css'
 
 function carDetails() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className='car-details-head'>
             <div className='car-details-container'>
