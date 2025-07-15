@@ -29,10 +29,12 @@ function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const response = await axios.post('http://localhost:3000/login', { email, password });
-    console.log(response);
-    // if (response.status === 200) {
-    //   dispatch(login());
-    // }
+    console.log(response.data.token);
+    localStorage.setItem('token', response.data.token);
+    if (response.status === 200) {
+      dispatch(logout());
+      window.location.reload();
+    }
   }
 
   const handleSignup = async (e) => {

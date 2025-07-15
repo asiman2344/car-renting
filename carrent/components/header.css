@@ -56,6 +56,18 @@
     cursor: pointer;
 }
 
+.header .right-side .profil-button {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.header .right-side .profil-button svg {
+    margin-right: 8px;
+}
+
 /* mobile menu */
 
 @media (max-width: 915px) {
