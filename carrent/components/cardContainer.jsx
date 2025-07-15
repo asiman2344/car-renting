@@ -2,10 +2,22 @@ import React from 'react'
 import './cardContainer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-// import Car from '../assets/carImage.webp'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import Card from './card'
 
 function cardContainer() {
+  const [cars, setCars] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/getProducts')
+      .then(res => {
+        console.log(res.data.products)
+        setCars(res.data.products)
+      })
+      .catch(err => console.log(err))
+  }, [])
+
   return (
     <div className='cardContainer'>
       <div className="container">
@@ -14,13 +26,9 @@ function cardContainer() {
           <p className='card-description'>Explore our selection of premium vehicles available for your next adventure.</p>
         </div>
         <div className='card-wrapper' data-aos="fade-up" data-aos-delay="100">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {cars.map((car) => (
+            <Card key={car._id} car={car} />
+          ))}
         </div>
         <div className='card-button-container'>
           <button className='card-button'>View All Cars<FontAwesomeIcon icon={faArrowRight} /></button>

@@ -41,7 +41,7 @@ function header() {
           <Link className='nav-link'>List Cars</Link>
           <button className={`login-button ${token? 'hidden' : ''}`} onClick={handleLoginClick}>Login</button>
           <button className={`profil-button ${token? '' : 'hidden'}`}>
-            <FontAwesomeIcon icon={faUser} /> profil
+            <FontAwesomeIcon icon={faUser} /> Logout
           </button>
         </div>
 
