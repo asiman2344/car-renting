@@ -57,3 +57,26 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.images{
+    margin: 10px auto;
+    width: 50%;
+}
+
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+.image-container .image-item{
+    width: 150px;
+    height: 100px;
+}
+
+.image-container .image-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

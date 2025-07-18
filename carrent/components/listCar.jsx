@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './listCar.css'
 
 function listCar() {
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [imagePreview, setImagePreview] = useState([]);
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setSelectedImage(file);
+            // Resim önizlemesi için URL oluştur
+            const previewURL = URL.createObjectURL(file);
+            setImagePreview([...imagePreview, previewURL]);
+        }
+    }
+
+    // Component unmount olduğunda URL'leri temizle
+    useEffect(() => {
+        return () => {
+            // Oluşturulan URL'leri temizle
+            imagePreview.forEach(url => URL.revokeObjectURL(url));
+        };
+    }, []);
+
     return (
         <div className='list-car'>
             <div className='list-car-container'>
@@ -90,8 +111,32 @@ function listCar() {
                                 <input type='text' id='car-name' name='car-location' />
                             </div>
                         </div>
+                        <div className='form-group'>
+                            <div className='form-group-label'>
+                                <label htmlFor='car-image'>Araç Resmi</label>
+                            </div>
+                            <div className='form-group-input'>
+                                <input 
+                                    onChange={handleImageChange} 
+                                    type='file' 
+                                    id='car-image' 
+                                    name='car-image' 
+                                    accept="image/*"
+                                    placeholder='Resim Yükle' 
+                                />
+                            </div>
+                        </div>
+                        <div className='images'>
+                            <div className='image-container'>
+                                {imagePreview.map((url, index) => (
+                                    <div key={index} className='image-item'>
+                                        <img src={url} alt={`Araç önizleme ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                         <div className='form-button'>
-                            <button type='submit'>List Car</button>
+                            <button type='submit'>Araç Ekle</button>
                         </div>
                     </form>
                 </div>
