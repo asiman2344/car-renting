@@ -12,8 +12,8 @@ function cardContainer() {
   useEffect(() => {
     axios.get('http://localhost:3000/getProducts')
       .then(res => {
-        console.log(res.data.products)
-        setCars(res.data.products)
+        console.log(res.data.cars,'res.data')
+        setCars(res.data.cars)
       })
       .catch(err => console.log(err))
   }, [])

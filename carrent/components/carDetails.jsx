@@ -15,8 +15,8 @@ function carDetails() {
     useEffect(() => {
         axios.get(`http://localhost:3000/getProductById/${id}`)
             .then(res => {
-                console.log(res.data.product, 'dataaaaa')
-                setCar(res.data.product)
+                console.log(res.data.car, 'dataaaaa')
+                setCar(res.data.car)
             })
     }, [id])
 
@@ -32,9 +32,6 @@ function carDetails() {
                         <Link className='car-details-link' to="/"><FontAwesomeIcon icon={faArrowLeft} />Back to Home</Link>
                         <div className='car-details-wrapper'>
                             <div className='car-details-content'>
-                                {/* <div className='car-details-image'>
-                                    <img src={Car} alt="car" />
-                                </div> */}
                                 <Carousel />
                                 <div className='car-details-info'>
                                     <div className='car-details-info-title'>
