@@ -14,7 +14,7 @@ function card({car}) {
             <div className="card-content">
                 <div className="card-title">
                     <p>{car.model}</p>
-                    <p>SUV 2016</p>
+                    <p>SUV {car.year}</p>
                 </div>
                 <div className="card-info1">
                     <div className='card-info1-item'>

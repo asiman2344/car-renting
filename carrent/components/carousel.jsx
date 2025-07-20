@@ -1,15 +1,14 @@
 import React from 'react'
 import './carousel.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-import Car from '../assets/carImage.webp'
+import {Pagination } from 'swiper/modules'
 
-// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-function carousel() {
+function carousel({ car }) {
+    const carimages = car.map(el => el.slice(8))
+
     return (
         <div className="carousel-container">
             <Swiper
@@ -19,21 +18,15 @@ function carousel() {
                 pagination={{ clickable: true, dynamicBullets: true }}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <div className='car-details-image'>
-                        <img src={Car} alt="car" />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='car-details-image'>
-                        <img src={Car} alt="car" />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='car-details-image'>
-                        <img src={Car} alt="car" />
-                    </div>
-                </SwiperSlide>
+                {
+                    carimages.map((el, index) => (
+                        <SwiperSlide key={index}>
+                            <div className='car-details-image'>
+                                <img src={`http://localhost:3000/uploads/${el}`} alt="car" />
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </div>
     )

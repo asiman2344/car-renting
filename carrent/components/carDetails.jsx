@@ -32,11 +32,11 @@ function carDetails() {
                         <Link className='car-details-link' to="/"><FontAwesomeIcon icon={faArrowLeft} />Back to Home</Link>
                         <div className='car-details-wrapper'>
                             <div className='car-details-content'>
-                                <Carousel />
+                                <Carousel car={car.images} />
                                 <div className='car-details-info'>
                                     <div className='car-details-info-title'>
                                         <h1>{car.model}</h1>
-                                        <p>SUV 2016</p>
+                                        <p>SUV {car.year}</p>
                                     </div>
                                     <div className='car-details-info-description'>
                                         <div className='car-details-info-description-wrapper'>
