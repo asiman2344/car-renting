@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './listCar.css'
 import axios from 'axios'
 
 function listCar() {
+    const navigate = useNavigate()
     const [selectedImages, setSelectedImages] = useState([]); 
     const [imagePreview, setImagePreview] = useState([]);
 
@@ -50,6 +52,7 @@ function listCar() {
             e.target.reset();
             setSelectedImages([]);
             setImagePreview([]);
+            navigate('/')
 
         } catch (error) {
             console.error('Yükleme hatası:', error);
