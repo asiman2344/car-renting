@@ -6,10 +6,12 @@ import { useNavigate } from 'react-router-dom'
 
 function card({car}) {
     const navigate = useNavigate()
+    const carImage = car.images[0].slice(8);
+    console.log(carImage, 'carImage')
     return (
         <div onClick={() => navigate(`/car-details/${car._id}`)} className="card">
             <div className="card-image">
-                <img src={Car} alt="car" />
+                <img src={`http://localhost:3000/uploads/${carImage}`} alt="car" />
             </div>
             <div className="card-content">
                 <div className="card-title">
@@ -31,6 +33,9 @@ function card({car}) {
                     <div className='card-info2-item'>
                         <div><FontAwesomeIcon icon={faLocationDot} /> <p>{car.location}</p></div>
                     </div>
+                </div>
+                <div className='add-to-book'>
+                    <button>Add to Book</button>
                 </div>
             </div>
             <div className='card-price'>
