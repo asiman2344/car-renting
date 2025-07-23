@@ -29,8 +29,9 @@ function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const response = await axios.post('http://localhost:3000/login', { email, password });
-    console.log(response.data.token);
+    console.log(response.data.user.id, 'response');
     localStorage.setItem('token', response.data.token);
+    localStorage.setItem('userId', response.data.user.id);
     if (response.status === 200) {
       dispatch(logout());
       window.location.reload();

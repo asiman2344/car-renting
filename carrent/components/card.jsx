@@ -3,13 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faGasPump, faCarSide, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Car from '../assets/carImage.webp'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function card({car}) {
     const navigate = useNavigate()
     const carImage = car.images[0].slice(8);
-    console.log(carImage, 'carImage')
+
+    const addBook = async () => {
+        const userId = localStorage.getItem('userId')
+        const response = await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`)
+        console.log(response, 'response')
+    }
+    
     return (
-        <div onClick={() => navigate(`/car-details/${car._id}`)} className="card">
+        <div  className="card">
             <div className="card-image">
                 <img src={`http://localhost:3000/uploads/${carImage}`} alt="car" />
             </div>
@@ -35,7 +42,7 @@ function card({car}) {
                     </div>
                 </div>
                 <div className='add-to-book'>
-                    <button>Add to Book</button>
+                    <button className='add-to-book-button' onClick={addBook}>Add to Book</button>
                 </div>
             </div>
             <div className='card-price'>
