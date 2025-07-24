@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faGasPump, faCarSide, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import Car from '../assets/carImage.webp'
+import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -12,11 +12,16 @@ function card({car}) {
     const addBook = async () => {
         const userId = localStorage.getItem('userId')
         const response = await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`)
-        console.log(response, 'response')
+        console.log(response.status, 'response')
+        if(response.status === 200){
+            toast.success('Car added to your books',{autoClose: 1000,position: "top-center"})
+        }else{
+            toast.error('Car not added to your books',{autoClose: 1000,position: "top-right"})
+        }
     }
     
     return (
-        <div  className="card">
+        <div  className="card" onClick={() => navigate(`/car-details/${car._id}`)}>
             <div className="card-image">
                 <img src={`http://localhost:3000/uploads/${carImage}`} alt="car" />
             </div>
@@ -42,7 +47,15 @@ function card({car}) {
                     </div>
                 </div>
                 <div className='add-to-book'>
-                    <button className='add-to-book-button' onClick={addBook}>Add to Book</button>
+                    <button
+                      className='add-to-book-button'
+                      onClick={e => {
+                        e.stopPropagation();
+                        addBook();
+                      }}
+                    >
+                      Add to Book
+                    </button>
                 </div>
             </div>
             <div className='card-price'>

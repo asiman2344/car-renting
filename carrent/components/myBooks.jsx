@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react'
 import './myBooks.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faGasPump, faCarSide, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 function myBooks() {
     const userId = localStorage.getItem('userId')
     const [myBooks, setMyBooks] = useState([])
     const [cars, setCars] = useState([])
     const [carImage, setCarImage] = useState('')
-
+    const navigate = useNavigate()
     useEffect(() => {
         const fetchMyBooks = async () => {
             const response = await axios.get(`http://localhost:3000/getMyBooks/${userId}`)
@@ -40,7 +41,7 @@ function myBooks() {
                 <div className='my-books-list'>
                     {
                         cars.map((car, index) => (
-                            <div className="my-books-card">
+                            <div className="my-books-card" onClick={() => navigate(`/car-details/${car._id}`)}>
                                 <div className="my-books-card-image">
                                     <img src={`http://localhost:3000/uploads/${carImage[index]}`} alt="car" />
                                 </div>

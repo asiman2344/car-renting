@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Login from '../components/login'
+import { ToastContainer } from 'react-toastify'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -23,6 +24,7 @@ function App() {
       <Outlet />
       <Footer />
       <Login />
+      <ToastContainer />
     </div>
   )
 }
