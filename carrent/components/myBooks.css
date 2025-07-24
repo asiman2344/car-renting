@@ -1,0 +1,129 @@
+
+.my-books-card{
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(204, 204, 204);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.my-books-card:hover{
+    transform: translateY(-5px);
+}
+
+.my-books-card-price{
+    position: absolute;
+    top: 136px;
+    right: 16px;
+    background-color: #191818;
+    padding: 8px 12px;
+    border-radius: .5rem;
+}
+
+.my-books-card-price p{
+    color: #fff;
+    font-weight: 600;
+}
+
+.my-books-card-price p span{
+    font-size: 14px;
+    color: #d1d1d1;
+}
+
+.my-books-container{
+    padding: 96px 128px;
+}
+
+.my-books-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.my-books-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    padding: 0 150px;
+}
+
+.my-books-card-image{
+    width: 100%;
+    height: 200px;
+    /* border-radius: 16px; */
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.my-books-card:hover .my-books-card-image img{
+    transform: scale(1.05);
+}
+
+.my-books-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+
+.my-books-card-content{
+    padding: 0 20px;
+}
+
+.my-books-card-title{
+    margin-bottom: 10px;
+}
+
+.my-books-card-title p:nth-child(1){
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.my-books-card-title p:nth-child(2){
+    font-weight: 500;
+    color: #666;
+}
+
+.my-books-card-info1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.my-books-card-info1-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.my-books-card-info1-item div p{
+    margin-left: 10px;
+}
+
+.my-books-card-info2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.my-books-card-info2-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.my-books-card-info2-item div p{
+    margin-left: 10px;
+}

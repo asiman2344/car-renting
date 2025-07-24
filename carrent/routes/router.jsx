@@ -3,6 +3,7 @@ import App from '../src/App'
 import CarDetails from '../components/carDetails'
 import Home from '../src/Home'
 import ListCar from '../components/listCar'
+import MyBooks from '../components/myBooks'
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path:"list-cars",
                 element: <ListCar />
+            },
+            {
+                path: "/my-books",
+                element: <MyBooks />
             }
         ]
     }
