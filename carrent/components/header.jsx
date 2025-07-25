@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +15,7 @@ function header() {
   const isLogin = useSelector((state) => state.login.isLogin);
   const dispatch = useDispatch();
   const token = localStorage.getItem('token');
-
+  const navigate = useNavigate()
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }
@@ -40,8 +41,8 @@ function header() {
           <div className='search-bar'><input type="text" placeholder='Search' /><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
           <Link to="/list-cars" className='nav-link'>List Cars</Link>
           <button className={`login-button ${token? 'hidden' : ''}`} onClick={handleLoginClick}>Login</button>
-          <button className={`profil-button ${token? '' : 'hidden'}`}>
-            <FontAwesomeIcon icon={faUser} /> Logout
+          <button onClick={() => navigate('/profile')} className={`profil-button ${token? '' : 'hidden'}`}>
+            <FontAwesomeIcon icon={faUser} /> Profile
           </button>
         </div>
 
