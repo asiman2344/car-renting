@@ -11,13 +11,12 @@ function card({car}) {
 
     const addBook = async () => {
         const userId = localStorage.getItem('userId')
-        const response = await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`)
-        console.log(response.status, 'response')
-        if(response.status === 200){
+        await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`).then(res=>{
             toast.success('Car added to your books',{autoClose: 1000,position: "top-center"})
-        }else{
-            toast.error('Car not added to your books',{autoClose: 1000,position: "top-right"})
-        }
+        }).catch(err=>{
+            console.log(err, 'err')
+            toast.error('Car already in your books',{autoClose: 1000,position: "top-center"})
+        })
     }
     
     return (
