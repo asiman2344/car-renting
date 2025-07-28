@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
-import { login, logout } from '../features/slicer'
+import { login, logout, setSearchQuery } from '../features/slicer'
 import './header.css'
 import { toast } from 'react-toastify'
 
@@ -32,9 +32,13 @@ function header() {
   const handleMyBooks = () => {
     if (!token) {
       toast.error('Log in for bookings', { autoClose: 1000, position: "top-center" })
-    }else{
+    } else {
       navigate('/my-books')
     }
+  }
+
+  const handleSearch = (e) => {
+    dispatch(setSearchQuery(e.target.value));
   }
 
   return (
@@ -47,7 +51,7 @@ function header() {
           <Link to="/" className='nav-link'>Home</Link>
           <Link className='nav-link'>Cars</Link>
           <button className='myBooks' onClick={handleMyBooks}>My Bookings</button>
-          <div className='search-bar'><input type="text" placeholder='Search' /><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+          <div className='search-bar'><input onChange={handleSearch} type="text" placeholder='Search' /><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
           <Link to="/list-cars" className='nav-link'>List Cars</Link>
           <button className={`login-button ${token ? 'hidden' : ''}`} onClick={handleLoginClick}>Login</button>
           <button onClick={() => navigate('/profile')} className={`profil-button ${token ? '' : 'hidden'}`}>

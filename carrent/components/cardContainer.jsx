@@ -5,18 +5,24 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Card from './card'
+import { useSelector } from 'react-redux'
 
 function cardContainer() {
   const [cars, setCars] = useState([])
+  const searchQuery=useSelector((state)=>state.login.searchQuery);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/getProducts')
+    let url = 'http://localhost:3000/getProducts';
+    if (searchQuery !== '') {
+      url += `/?model=${encodeURIComponent(searchQuery)}`;
+    }
+    axios.get(url)
       .then(res => {
-        console.log(res.data.cars,'res.data')
+        console.log(res.data.cars, 'res.data')
         setCars(res.data.cars)
       })
       .catch(err => console.log(err))
-  }, [])
+  }, [searchQuery])
 
   return (
     <div className='cardContainer'>
