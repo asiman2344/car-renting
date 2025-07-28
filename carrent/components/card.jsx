@@ -11,7 +11,15 @@ function card({car}) {
 
     const addBook = async () => {
         const userId = localStorage.getItem('userId')
-        await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`).then(res=>{
+        await axios.post(`http://localhost:3000/addCarToMyBooks/${userId}/${car._id}`,
+            {}, 
+            {
+                headers:{
+                    authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            }
+        )
+        .then(res=>{
             toast.success('Car added to your books',{autoClose: 1000,position: "top-center"})
         }).catch(err=>{
             console.log(err, 'err')

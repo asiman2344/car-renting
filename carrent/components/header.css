@@ -68,6 +68,11 @@
     margin-right: 8px;
 }
 
+.myBooks{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 /* mobile menu */
 
 @media (max-width: 915px) {
